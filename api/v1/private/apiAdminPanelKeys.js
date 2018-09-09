@@ -8,7 +8,7 @@ async function getAllFromDB() {
 }
 
 app.get("/api/v1/getKeys", (req, res) => {
-    var key = req.query.k;
+    var key = req.params.k;
     if (key != config.server.key) {
         return res.end("Invalid key")
     } else {
