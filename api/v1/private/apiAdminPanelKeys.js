@@ -7,7 +7,7 @@ async function getAllFromDB() {
     return await query("SELECT * FROM tokens WHERE allowed = 1")
 }
 
-app.get("/api/v1/getKeys", (req, res) => {
+app.get("/api/v1/getKeys&k=:k", (req, res) => {
     var key = req.params.k;
     if (key != config.server.key) {
         return res.end("Invalid key")
