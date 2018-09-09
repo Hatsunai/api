@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const { query } = require("../../objects/db")
+const { query } = require("../../../obj/db")
 
 async function getAllFromDB(u) {
     const user = await query("SELECT * FROM users WHERE username = ?", u)

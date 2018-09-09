@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
-const { query } = require("../../objects/db");
-const config = require("../../config.json");
+const { query } = require("../../../obj/db");
+const config = require("../../../config.json");
 
 async function getAllFromDB() {
     return await query("SELECT * FROM tokens WHERE allowed = 1")
